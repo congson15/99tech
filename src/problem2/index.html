@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Currency Exchange</title>
+		<link rel="stylesheet" href="./src/style.css" />
+	</head>
+	<body>
+		<div class="app-container">
+			<form onsubmit="return false" class="swap-form">
+				<h1 class="title">Currency Exchange</h1>
+
+				<!-- From Token -->
+				<label for="fromToken">From Token</label>
+				<div id="fromToken" class="dropdown"></div>
+
+				<button type="button" id="reverseButton" class="reverse-button" title="Switch Tokens">
+					⇅
+				</button>
+
+				<!-- To Token -->
+				<label for="toToken">To Token</label>
+				<div id="toToken" class="dropdown"></div>
+
+				<!-- Exchange Rate -->
+				<p id="exchangeRate" class="exchange-rate"></p>
+
+				<!-- Amount to Send -->
+				<label for="inputAmount">Amount to Send</label>
+				<input id="inputAmount" type="number" placeholder="e.g. 100" />
+
+				<!-- Amount to Receive -->
+				<label for="outputAmount">Amount to Receive</label>
+				<input id="outputAmount" disabled placeholder="Calculated amount" />
+
+				<!-- Exchange Button -->
+				<button id="swapButton" class="exchange-button">
+					<span class="button-text">Exchange</span>
+					<span class="spinner hidden"></span>
+				</button>
+
+				<!-- Error Message -->
+				<p id="error" class="error"></p>
+			</form>
+		</div>
+
+		<script type="module" src="./src/main.ts"></script>
+	</body>
+</html>
